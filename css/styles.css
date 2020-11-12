@@ -125,6 +125,41 @@ margin: 0;
     color: var(--activ-text-color);
 }
 
+.site-nav .item {
+  position: relative;
+}
+
+.site-nav .item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--activ-text-color);
+
+  opacity: 0;
+}
+
+.site-nav .item.current-line::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--activ-text-color);
+
+  opacity: 1;
+}
+
+
+.site-nav .item:hover::after {
+  opacity: 1;
+}
+
 
 .container {
     margin-left: auto;
@@ -273,11 +308,11 @@ margin-bottom: 0;
 
 .thumb {
   position: relative;
+  height: 294px;
 }
 
 .thumb h3 {
   position: absolute;
-  display: block;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -290,8 +325,7 @@ margin-bottom: 0;
   line-height: 1.14;
   text-align: center;
   text-transform: uppercase;
-  align-items: center;
-color: #FFFFFF;
+  color: #FFFFFF;
   /* padding-left: 82px;
   padding-top: 27px;
   padding-bottom: 27px; */
@@ -650,6 +684,44 @@ color: var(--secondary-text-colr);
     display: none;
 }
 
+.works.list .thumb::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 150, 243, 0.9);
+
+  opacity: 0;
+}
+
+.works.list .thumb:hover::before {
+  opacity: 1;
+}
+
+.works.list .item .thumb-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+
+  width: 322px;
+  height: 168px;
+
+  font-size: 18px;
+  line-height: 1.56;
+  color: #FFFFFF;
+
+  opacity: 0;
+}
+
+.works.list .thumb:hover .thumb-text {
+  opacity: 1;
+}
 
 
 /* цвет страницы #FFFFFF */
