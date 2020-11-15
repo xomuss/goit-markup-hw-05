@@ -42,7 +42,7 @@
         <!--шапка-->
         <section class="hero ">
             <h1 class="hero-title">Эффективные решения <br>для вашего бизнеса</h1>
-            <button class="button secondary">Заказать услугу</button>
+            <button class="button secondary" data-modal-open>Заказать услугу</button>
         </section>
         <!--особенности-->
         <section class="advantages">
@@ -310,6 +310,16 @@
               </div>          
         </div>
   </footer>
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button class="close-button" data-modal-close>
+        <svg class="close" width="30" height="30">
+          <use href="./images/icons/symbol-defs-1.svg#close-1"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <script src="./js/modal.js"></script>
 </body>
 </html>
 
