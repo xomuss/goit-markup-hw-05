@@ -760,6 +760,7 @@ color: var(--secondary-text-colr);
   height: 100%;
 
   background: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms var(--time-functiom);
 }
 
 .backdrop.is-hidden {
